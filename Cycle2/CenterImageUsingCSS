@@ -1,0 +1,11 @@
+<html>
+<head>
+	<title> Center an Image using HTML </title>
+	<link rel="stylesheet" href="css/venice.css">
+</head>
+<body>
+	<h3>Center an Image</h3>
+	<img src="src/venice.jpg" alt="Paris" class="center"> 
+	<h3 id = "special">Venice</h3>
+</body>
+</html>

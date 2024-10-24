@@ -1,0 +1,16 @@
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+h3 {
+	background-color:red;
+	color:white;
+	padding: 12px;
+}
+#special{
+	background-color:red;
+	color:white;
+	padding: 12px;
+}

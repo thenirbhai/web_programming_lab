@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Light Bulb Switch</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Light Bulb</h1>
+    <img id="bulb" src="src/bulb.png" alt="Light Bulb"><br>
+    <button id="OnButton">Turn On</button>
+    <button id="OffButton">Turn Off</button>
+
+    <script>
+        const bulb = document.getElementById('bulb');
+        const OnButton = document.getElementById('OnButton');
+        const OffButton = document.getElementById('OffButton');
+
+        OnButton.addEventListener('click', () => {
+            bulb.src = 'src/bulbON.png';
+        });
+
+        OffButton.addEventListener('click', () => {
+            bulb.src = 'src/bulb.png';
+        });
+    </script>
+</body>
+</html>
+
+	
