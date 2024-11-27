@@ -1,224 +1,90 @@
-<html>
-<head>
-    
-    <title>Form Validation</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form with Validation</title> 
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head> 
+<body> 
+  <h1 align="center">STUDENT REGISTRATION FORM</h1> 
+  <form id="registrationForm" onsubmit="return validateForm()"> 
+    <table align="center" border="2"> 
+      <tbody>
+        <tr> 
+          <td><label for="firstName">FIRST NAME</label></td> 
+          <td><input type="text" id="firstName" name="firstName" maxlength="30" required> (max 30 characters)
+            <span id="firstNameError" class="error"></span>
+          </td> 
+        </tr> 
+        <tr> 
+          <td><label for="lastName">LAST NAME</label></td> 
+          <td><input type="text" id="lastName" name="lastName" maxlength="30" required> (max 30 characters)
+            <span id="lastNameError" class="error"></span>
+          </td> 
+        </tr> 
+        <tr> 
+          <td><label for="email">EMAIL ID</label></td> 
+          <td><input type="email" id="email" name="email" required> 
+            <span id="emailError" class="error"></span>
+          </td> 
+        </tr> 
+        <tr> 
+          <td><label for="mobile">MOBILE NUMBER</label></td> 
+          <td><input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" required> (10 digits)
+            <span id="mobileError" class="error"></span>
+          </td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" align="center"> 
+            <button type="submit">Submit</button> 
+            <button type="reset">Reset</button> 
+          </td> 
+        </tr> 
+      </tbody>
+    </table> 
+  </form> 
 
-
-
-    <html>
-    <head>
-        <title>forms</title>
-    </head>
-    <body>
-        <table border="1" cellpadding="8px">
-            <form id="myForm">
-                <tr>
-                    <td>FIRST NAME</td>
-                    <td><input type="text" id="name">&nbsp;(max 30 characters)</td>
-                </tr>
-
-                <tr>
-                    <td>LAST NAME</td>
-                    <td><input  type="text" id="name2">&nbsp;(max 30 characters)</td>
-                </tr>
-
-                <tr>
-                    <td>DATE OF BIRTH</td>
-                    <td><input type="date"></td>
-                </tr>
-
-                <tr>
-                    <td>EMAIL ID</td>
-                    <td><input type="email" id="email"></td>
-                </tr>
-                <tr>
-                    <td>MOBILE NUMBER</td>
-                    <td><input type="text" id="phone">&nbsp;(10 digit number)</td>
-                </tr>
-                <tr>
-                    <td>GENDER</td>
-                    <td><input type="radio">Male<input type="radio">Female</td>
-                </tr>
-                <tr>
-                    <td>ADDRESS</td>
-                    <td><input type="textarea"></td>
-                </tr>
-                <tr>
-                    <td>CITY</td>
-                    <td><input type="text">&nbsp;(max 30 characters)</td>
-                </tr>
-                <tr>
-                    <td>PINCODE</td>
-                    <td><input type="text">&nbsp;(max 6 characters)</td>
-                </tr>
-                <tr>
-                    <td>STATE</td>
-                    <td><input type="text">&nbsp;(max 30 characters)</td>
-                </tr>
-                <tr>
-                    <td>COUNTRY</td>
-                    <td><input type="text">&nbsp;(max 30 characters)</td>
-                </tr>
-
-                <tr>
-                    <td>HOBBIES</td>
-                    <td>Drawing<input type="checkbox"> Singng<input type="checkbox"> Dancing<input type="checkbox"> Sketching<input type="checkbox">                        <br>Others<input type="checkbox"><input type="text"></td>
-                </tr>
-
-                <tr>
-                    <td>QUALIFICATION</td>
-                    <td>
-                        <table>
-                            <tr>
-                                <th>SL.NO.</th>
-                                <th>Examination</th>
-                                <th>Board</th>
-                                <th>Percentage</th>
-                                <th>Year of Passing</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Class X</td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                            </tr>
-
-                            <tr>
-                                <td>2</td>
-                                <td>Class XII</td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-                                <td>Graduation</td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                            </tr>
-
-                            <tr>
-                                <td>4</td>
-                                <td>Masters</td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td><center>(10 char max)</center</td>
-                                <td><center>(upto 2 decimal)</center></td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>COURSES<br>APPLIED FOR</td>
-                    <td>MCA<input type="radio">M.TECH<input type="radio">M.Sc<input type="radio">Ph.D<input type="radio"></td>
-                </tr>
-
-                <tr>
-                    <td>TYPE YOUR PASSWORD</td>
-                    <td><input type="password">&nbsp;(max 30 characters)</td>
-                </tr>
-
-                <tr>
-                    <td>UPLOAD YOUR PHOTO</td>
-                    <td><input type="file"></td>
-                </tr>
-
-                <tr>
-                    <td>DATE OF TC</td>
-                    <td><input type="date"></td>
-                </tr>
-
-                <tr  >
-                    <td colspan="2"><center><input type="submit" onclick="validateForm()">&nbsp;<input type="submit" value="Reset"></center></td>
-                </tr>
-
-            </form>
-        </table>
-    </body>
-</html>
-
-
-
-    <script = "src/validation.js">
-        function checkEmptyFields() {
-            const name = document.getElementById('name').value.trim();
-            const name2 = document
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-
-
-            return name === '' || email === '' || phone === '' || name2 === ''; // Returns true if any field is empty
-        }
-
-        function verifyEmail(email) {
-            const atPosition = email.indexOf("@");
-            const dotPosition = email.lastIndexOf(".");
-
-            // Check if email has valid positions for "@" and "."
-            if (atPosition < 1 || dotPosition < atPosition + 2 || dotPosition + 2 >= email.length) {
-                return false; // Invalid email
-            }
-            return true; // Valid email
-        }
-
-        function verifyName(name) {
-            // Check if name is not a number and has a valid length
-            if (!isNaN(name) || name.length > 30 || name.length < 1) {
-                return false; // Invalid name
-            }
-            return true; // Valid name
-        }
-
-        function verifyName(name2) {
-            // Check if name is not a number and has a valid length
-            if (!isNaN(name2) || name2.length > 30 || name2.length < 1) {
-                return false; // Invalid name
-            }
-            return true; // Valid name
-        }
-
-        function verifyPhone(phone) {
-            // Check if phone number is exactly 10 digits and is numeric
-            if (phone.length !== 10 || isNaN(phone)) {
-                return false; // Invalid phone number
-            }
-            return true; // Valid phone number
-        }
-
-        function validateForm() {
-            const email = document.getElementById('email').value.trim();
-            const name = document.getElementById('name').value.trim();
-            const name2 = document.getElementById('name2').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-
-            if (checkEmptyFields()) {
-                alert('Please fill in all fields.');
-            } else if (!verifyEmail(email)) {
-                alert("Please enter a valid email address. At position: " + email.indexOf("@") + " Dot position: " + email.lastIndexOf("."));
-            } else if (!verifyName(name)) {
-                alert('Please enter a valid name. The first name should not be a number and must be less than 30 characters.');
-            } 
-            else if (!verifyName(name2)) {
-                alert('Please enter a valid name. The last name should not be a number and must be less than 30 characters.');
-            }
-            else if (!verifyPhone(phone)) {
-                alert('Please enter a valid phone number. The number should be numeric and must be 10 digits long.');
-            } else {
-                alert(' Proceeding...');
-            }
-        }
-    </script>
+  <script>
+    function validateForm() {
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mobile = document.getElementById('mobile').value.trim();
+      const namePattern = /^[A-Za-z\s]{1,30}$/;
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      const mobilePattern = /^[0-9]{10}$/;
+      let isValid = true;
+      if (!namePattern.test(firstName)) {
+        document.getElementById('firstNameError').textContent = "Please enter a valid First Name (letters only, max 30 characters).";
+        isValid = false;
+      } else {
+        document.getElementById('firstNameError').textContent = "";
+      }
+      if (!namePattern.test(lastName)) {
+        document.getElementById('lastNameError').textContent = "Please enter a valid Last Name (letters only, max 30 characters).";
+        isValid = false;
+      } else {
+        document.getElementById('lastNameError').textContent = "";
+      }
+      if (!emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = "Please enter a valid Email address.";
+        isValid = false;
+      } else {
+        document.getElementById('emailError').textContent = "";
+      }
+      if (!mobilePattern.test(mobile)) {
+        document.getElementById('mobileError').textContent = "Please enter a valid 10-digit Mobile Number.";
+        isValid = false;
+      } else {
+        document.getElementById('mobileError').textContent = "";
+      }
+      return isValid;
+    }
+  </script>
 </body>
 </html>
